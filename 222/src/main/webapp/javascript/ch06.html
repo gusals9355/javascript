@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var result = 10 && 12;
+		result = 100 && 12 && 17; //모두 트루값이기떄문에 맨 마지막 17값이 들어간다.
+		console.log(result);
+		result = 100 && 0 && 17; //하나라도 false면 false이기때문에 2번째 0값이 들어간다
+		console.log(result);
+		
+		result = 10 || 12; //하나라도 true면 true라서 맨앞만 트루값이면 그 값이 들어간다
+		console.log(result);
+		
+		var a = '';
+		var b = '안녕';
+		
+		var result2 = a || b; //하나라도 true면 true기때문에 안녕이 들어감
+		console.log(result2);
+	</script>
+</body>
+</html>

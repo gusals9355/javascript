@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function sum(n1, n2) { //오버로딩이 안됨
+			return n1+n2;
+		}
+		
+		function sum2(n1, n2) {
+			console.log(n1+n2);	
+		}
+		sum2(20, 40);
+		
+		var ddd;
+		if( ddd= sum(10, 20)){
+			console.log(ddd);
+		}
+		
+		var result = sum(10, 20);
+		console.log('%s = %s', 'result',result)
+	</script>
+</body>
+</html>

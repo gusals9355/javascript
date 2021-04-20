@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var arr = [10,20,30,40,50];
+		var result = arr.map(function(item) { 
+			if(arr>=30){
+				return item*2;
+			}
+			return item;
+		});
+		
+		function myMap(item){
+			return item-2;
+		}
+		var result2 = arr.map(myMap);
+		
+		console.log(result);
+		console.log(result2);
+	</script>
+</body>
+</html>
