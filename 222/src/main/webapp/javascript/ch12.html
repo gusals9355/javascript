@@ -6,13 +6,17 @@
 </head>
 <body>
 	<script>
+	
 		var arr = [10,20,30,40,50];
 		var result = arr.map(function(item) { 
-			if(arr>=30){
+			if(item>=30){
 				return item*2;
 			}
 			return item;
 		});
+		
+		var result3 = arr.map(x => x*2);
+		console.log('retulr3 : ' +result3);
 		
 		function myMap(item){
 			return item-2;
@@ -21,6 +25,15 @@
 		
 		console.log(result);
 		console.log(result2);
+		
+		//35이하는 -5
+		//35초과는 +5
+		var result4 = arr.map(function(item){
+			if(item <=35) return item-5;
+			return item+5;
+		})
+		console.log(result4);
+		
 	</script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	function foo() {
+		return new Promise(function(resolve, reject) { 
+			setTimeout(() => {
+				console.log('foo ok');
+				resolve();
+			}, 3000);
+		});
+	}
+	
+	function bar() {
+		return new Promise(function(resolve, reject) { 
+			setTimeout(() => {
+				console.log('bar ok');
+				resolve();
+			}, 2000);
+		});
+	}
+	
+	function baz() {
+		return new Promise(function(resolve, reject) { 
+			setTimeout(() => {
+				console.log('baz ok');
+				resolve();
+			}, 1000);
+		});
+	}
+	
+	
+	//await, async
+	
+	async function run(){
+		await foo();
+		await bar();
+		await baz();
+	}
+	run();
+	
+	
+	
+	
+	</script>
+</body>
+</html>

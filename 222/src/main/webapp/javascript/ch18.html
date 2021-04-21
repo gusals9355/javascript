@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var pro1 = new Promise(function(resolve, reject) { //resolve잘 되엇으면 쓰는함수, reject 에러나면 쓰는함수
+			setTimeout(() => {
+				resolve(1);
+			}, 3000);
+		});
+		
+		var pro2 =  new Promise(function(resolve) { 
+			setTimeout(() => {
+				resolve(2);
+			}, 2000);
+		});
+		
+		pro1.then((res) => {
+			console.log(res);
+		});
+		
+		pro2.then((res) => {
+			console.log(res);
+		});
+		
+		new Promise(function(resolve, reject) { 
+			setTimeout(() => {
+				resolve(10);
+			}, 3000);
+		})
+		
+		.then((res)=>{
+			console.log(res);
+		});
+	</script>
+</body>
+</html>
